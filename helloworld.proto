@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;  //是否为多文件
+option java_package = "cn.huacloud.springboot.grpc.helloworld";  //生成的java类的包名
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.  定义一个服务类
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.  请求类
+message HelloRequest {
+  string name = 1;
+  bytes input=2;//文件流传输格式
+  bool flag=3;  //布尔值传入类型
+}
+
+// The response message containing the greetings  返回类
+message HelloReply {
+  string message = 1;
+}

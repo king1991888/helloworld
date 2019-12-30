@@ -1,0 +1,4 @@
+# helloworld
+python-helloworld。grpc-demo。docker化demo
+
+执行helloworld_grpc_server.py文件即可启动，然后运行helloworld_grpc_client即可完成grpc客户端与服务端之间的通信。
